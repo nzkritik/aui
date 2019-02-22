@@ -1072,7 +1072,7 @@ install_desktop_environment(){
   echo " 3) Enlightenment   12) i3"
   echo " 4) GNOME           13) OpenBox"
   echo " 5) KDE             14) Xmonad"
-  echo " 6) LXQT"
+  echo " 6) LXQT            15) bspwm"
   echo " 7) Mate"
   echo " 8) XFCE"
   echo " 9) Budgie"
@@ -1340,6 +1340,16 @@ install_desktop_environment(){
       install_themes "XMONAD"
       ;;
       #}}}
+    15)
+      #BSPWM {{{
+      print_title "BSPWM - https://wiki.archlinux.org/index.php/Bspwm"
+      print_info "bspwm is a tiling window manager that represents windows as the leaves of a full binary tree. bspwm supports multiple monitors and is configured and controlled through messages."
+      package_install "bspwm sxhkd"
+      pause_function
+      install_misc_apps "BSPWM"
+      install_themes "BSPWM"
+      ;;
+      #}}}  
     "b")
       break
       ;;
